@@ -1,0 +1,37 @@
+//Clientes Cards
+.titulo2 {
+	color: #642a73;
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 60px;
+}
+.cards {
+	display: flex;
+	justify-content: space-evenly;
+	.card {
+		background:  map-get($mapa-colores, Morado);
+		display: flex;
+		width: 46%;
+		height: 200px;
+		align-items: center;
+		justify-content: space-evenly;
+		border-radius: 5px;
+		box-shadow: 0 0 6px  map-get($mapa-colores, Black);
+		img {
+			width: 100px;
+			height: 100px;
+			object-fit: cover;
+			border: 3px solid  map-get($mapa-colores, Blanco);
+			border-radius: 50%;
+			display: block;
+		}
+		>.contenido-texto-card {
+			width: 60%;
+			color:  map-get($mapa-colores, Blanco);
+			p {
+				font-weight: 300;
+				padding-top: 5px;
+			}
+		}
+	}
+}
