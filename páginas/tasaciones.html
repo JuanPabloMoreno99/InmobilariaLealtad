@@ -38,24 +38,59 @@
         <section class="tasaciones" data-aos="zoom-in">
             <h2>Tasaciones</h2>
             <br>
-            <h4>Complete el siguiente formulario para solicitar la tasación de un inmueble.</h4>
+            <h4>Realiza una valoración online gratuita con nuestro simulador</h4>
         </section>
-        <form class="form" action="https://formspree.io/f/mjvldjgv"
-        method="POST">
-            <div class="form__container">
-                <h2 class="form__title">Formulario</h2>
-                <input type="text" class="form__input" placeholder="Nombre y Apellido" name="name">
-                <input type="text" class="form__input" placeholder="Email" name="email">
-                <input type="text" class="form__input" placeholder="Telefono" name="Telefono">
-                <input type="text" class="form__input" placeholder="Domicilio del inmueble a Tasar" name="Domicilio">
-                <input type="text" class="form__input" placeholder="Horario de contacto/visita" name="Horario">
-                <textarea class="form__input form__input--message" placeholder="Mensaje" name="message"></textarea>
-                <input type="submit" value="Enviar" class="form__cta">
-            </div>
+        <form class="form" id="formulario" action="#">
+
+            <label class="form__input" for="ciudad_localidad">Ciudad</label>
+            <select class="form__input" id="ciudad_localidad">
+                <option value=0>Rosario</option>
+                <option value=1>Cordoba</option>
+                <option value=2>Parana</option>
+                <option value=3>Buenos Aires</option>
+            </select>
+            <br>
+            <br>
+
+            <label class="form__input" for="n_ambientes">Ambientes</label>
+            <select class="form__input" id="n_ambientes">
+                <option value=0>1</option>
+                <option value=1>2</option>
+                <option value=2>3</option>
+                <option value=3>4</option>
+            </select>
+            <br>
+            <br>
+            <label class="form__input" for="casa_departamento">Tipo de vivienda</label>
+            <select class="form__input" id="casa_departamento">
+                <option value=0>Casa</option>
+                <option value=1>Departamento</option>
+            </select>
+            <br>
+            <br>
+            <input class="form__cta" type="submit" onclick="capturar()" value="Calcular">
+            <input class="form__input" name="total" type="number" readonly id="result">
+
         </form>
+
+
+        <table class="form">
+            <tr>
+                <th class="form__cta">Valor de Ciudad</th>
+                <th class="form__cta">Valor de Ambientes</th>
+                <th class="form__cta">Valor de Vivienda</th>
+                <th class="form__cta">TOTAL</th>
+            </tr>
+
+            <tr>
+                <td class="form__input" id="ciudad2">0000</td>
+                <td class="form__input" id="ambientes2">0000</td>
+                <td class="form__input" id="vivienda2">0000</td>
+                <td class="form__input" id="demoSelect">0000</td>
+            </tr>
+        </table>
     </main>
     <br>
-    <hr>
     <footer>
         <div class="contenedor-footer">
             <div class="content-foot">
@@ -78,6 +113,7 @@
     <script>
         AOS.init();
     </script>
+    <script src="../JS/TS.js"></script>
 </body>
 
 </html>
